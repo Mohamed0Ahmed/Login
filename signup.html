@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <!--& ###############  Font Awsome  ############# -->
+      <link rel="stylesheet" href="css/all.min.css" />
+
+      <!--& ###############  Google font  ############# -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+         rel="stylesheet"
+      />
+
+      <!--& ###############  Bootstrap  ################ -->
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+      <!--& ###############  File Css  ################# -->
+      <link rel="stylesheet" href="css/style.css" />
+
+      <title>Sign Up</title>
+      <!--& ############## Titlle Icon   ################ -->
+      <link rel="icon" type="image/jpg" href="images/736543-200.png" />
+   </head>
+   <body id="index">
+      <div class="top-0 start-0 bottom-0 end-0" id="reload">
+         <span class="loading"></span>
+      </div>
+      <section id="home">
+         <div class="container center">
+            <!-- <div class="bg-light p-4"></div> -->
+            <div class="contain d-flex flex-column">
+               <div
+                  class="bg-custom d-flex justify-content-between align-items-center flex-column"
+               >
+                  <p class="py-3 fw-bold">Already Have an Email</p>
+                  <button class="btn btn-outline-danger fw-bold">
+                     <a href="index.html">Sign In</a>
+                  </button>
+               </div>
+               <div class="p-3">
+                  <div class="py-2">
+                     <h2 class="pb-3 text-center fw-bold">Sign Up</h2>
+                     <p
+                        class="px-2 text-center fw-bold text-danger d-none fill"
+                     >
+                        Please Fill inputs first!!
+                     </p>
+                     <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter Your Name"
+                        id="name"
+                     />
+                     <p class="px-2 name d-none" style="color: red">
+                        Sorry , it must be only letters
+                     </p>
+                     <input
+                        type="text"
+                        class="form-control mt-3"
+                        placeholder="Enter Your Email"
+                        id="mail"
+                     />
+                     <p class="px-2 d-none" style="color: red">
+                        Sorry this Email already exist !!
+                     </p>
+                     <div class="d-none mail">
+                        <p class="px-2 " style="color: red">
+                           Sorry this Email not valid
+                        </p>
+                        <p class="px-2">Example : xxx@gmail.com</p>
+                     </div>
+                     <input
+                        type="password"
+                        class="form-control mt-3"
+                        placeholder="Enter Your Password"
+                        id="pass"
+                     />
+                     <div class="d-none pass">
+                        <p class="px-2 " style="color: red">
+                           Sorry this Password not valid
+                        </p>
+                        <p class="px-2 " style="color: black">
+                           For more information ,
+                           <button
+                              class="border-0 px-0 text-danger"
+                              style="background-color: whitesmoke"
+                              id="morePassInfo"
+                           >
+                              click here
+                           </button>
+                        </p>
+                     </div>
+                     <div class="pass-info d-none p-4">
+                        <i class="fa-solid fa-xmark fa-2x" id="closeModal"></i>
+                        <h4 class="fw-bold">Password Must be :</h4>
+                        <p>- At least 6 characters</p>
+                        <p>- At least one letter</p>
+                        <p>- At least one number</p>
+                     </div>
+                     <div>
+                        <label for="show" class="px-2">Show Password</label>
+                        <input type="checkbox" class="p-2" id="show" />
+                     </div>
+                     <div class="text-center pt-3">
+                        <button
+                           class="btn btn-outline-info fw-bold"
+                           id="signUp"
+                        >
+                           Sign Up
+                        </button>
+
+                        <div class="succes d-none">
+                           <p class="p-2 fw-bold text-success">Succes !!</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--* ############## Java bundle File ############### -->
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <!--* ############## Java Script File ############### -->
+      <script src="js/main.js"></script>
+   </body>
+</html>
