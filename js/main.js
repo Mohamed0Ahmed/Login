@@ -13,6 +13,7 @@ var userNameUp = document.getElementById("name"),
    close = document.getElementById("closeModal"),
    passInfo = document.getElementById("morePassInfo"),
    login = document.getElementById("login"),
+   logout = document.getElementById("logout"),
    save = document.getElementById("save"),
    index = document.getElementById("index"),
    index2 = document.getElementById("index2"),
@@ -136,7 +137,9 @@ if (index2 != null) {
             console.log("hello");
             document.getElementById("log").setAttribute("href", "home.html");
             userPasswordIn.nextElementSibling.classList.add("d-none");
-            homeName = users[i].userName
+            homeName = users[i].userName;
+            localStorage.setItem("userName", homeName);
+            break;
          }
          //*
          else if (userEmailIn.value == "" && userPasswordIn.value == "") {
@@ -201,6 +204,7 @@ if (index3 != null) {
             console.log(users[i]);
 
             clearForm();
+            break;
          }
          //*
          else if (userEmailRe.value == "" || userNameRe.value == "") {
@@ -262,6 +266,14 @@ if (index3 != null) {
    }
 }
 
-if(index4 != null){
-   document.getElementById('welcome').innerHTML=('Welcome ' + users[0].userName)
+if (index4 != null) {
+   var homeName = localStorage.getItem("userName");
+   document.getElementById("welcome").innerHTML = "Welcome " + homeName;
+
+   logout.addEventListener("click", function (e) {
+      localStorage.removeItem("userName");
+   });
+   if (homeName == undefined) {
+      location.href = '/index.html'
+   }
 }
